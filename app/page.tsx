@@ -1,5 +1,5 @@
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/scores", {
+  const res = await fetch("/api/scores", {
     cache: "no-store",
   });
 
