@@ -1,0 +1,246 @@
+import type { Participant } from "../lib/types";
+
+export const participants: Participant[] = [
+  {
+    id: "eduardo",
+    name: "Eduardo",
+    playerIds: [
+      "cameron-young",
+      "justin-thomas",
+      "viktor-hovland",
+      "sungjae-im",
+      "adam-scott",
+    ],
+  },
+  {
+    id: "guillermo",
+    name: "Guillermo",
+    playerIds: [
+      "justin-rose",
+      "chris-gotterup",
+      "bryson-dechambeau",
+      "jordan-spieth",
+      "nico-echavarria",
+    ],
+  },
+  {
+    id: "marquard",
+    name: "Marquard",
+    playerIds: [
+      "collin-morikawa",
+      "chris-gotterup",
+      "viktor-hovland",
+      "jake-knapp",
+      "shane-lowry",
+    ],
+  },
+  {
+    id: "robert",
+    name: "Robert",
+    playerIds: [
+      "scottie-scheffler",
+      "ludvig-aberg",
+      "bryson-dechambeau",
+      "brooks-koepka",
+      "patrick-cantlay",
+    ],
+  },
+  {
+    id: "pedro",
+    name: "Pedro",
+    playerIds: [
+      "tommy-fleetwood",
+      "chris-gotterup",
+      "jon-rahm",
+      "adam-scott",
+      "nicolai-hojgaard",
+    ],
+  },
+  {
+    id: "chema",
+    name: "Chema",
+    playerIds: [
+      "scottie-scheffler",
+      "ludvig-aberg",
+      "corey-conners",
+      "jon-rahm",
+      "brooks-koepka",
+    ],
+  },
+  {
+    id: "martin",
+    name: "Martin",
+    playerIds: [
+      "ludvig-aberg",
+      "scottie-scheffler",
+      "bryson-dechambeau",
+      "jason-day",
+      "nicolai-hojgaard",
+    ],
+  },
+  {
+    id: "santiago-p",
+    name: "Santiago P",
+    playerIds: [
+      "xander-schauffele",
+      "ludvig-aberg",
+      "jon-rahm",
+      "jake-knapp",
+      "corey-conners",
+    ],
+  },
+  {
+    id: "jp-vega",
+    name: "JP Vega",
+    playerIds: [
+      "rory-mcilroy",
+      "ludvig-aberg",
+      "viktor-hovland",
+      "shane-lowry",
+      "adam-scott",
+    ],
+  },
+  {
+    id: "pato-m",
+    name: "Pato M",
+    playerIds: [
+      "cameron-young",
+      "hideki-matsuyama",
+      "jon-rahm",
+      "jason-day",
+      "sungjae-im",
+    ],
+  },
+  {
+    id: "obeja",
+    name: "Obeja",
+    playerIds: [
+      "justin-rose",
+      "ben-griffin",
+      "min-woo-lee",
+      "corey-conners",
+      "jason-day",
+    ],
+  },
+  {
+    id: "fede-h",
+    name: "Fede H",
+    playerIds: [
+      "scottie-scheffler",
+      "ludvig-aberg",
+      "viktor-hovland",
+      "brooks-koepka",
+      "adam-scott",
+    ],
+  },
+  {
+    id: "nic-buhler",
+    name: "Nic Buhler",
+    playerIds: [
+      "scottie-scheffler",
+      "ludvig-aberg",
+      "bryson-dechambeau",
+      "min-woo-lee",
+      "shane-lowry",
+    ],
+  },
+  {
+    id: "luca",
+    name: "Luca",
+    playerIds: [
+      "collin-morikawa",
+      "bryson-dechambeau",
+      "ludvig-aberg",
+      "jordan-spieth",
+      "shane-lowry",
+    ],
+  },
+  {
+    id: "adam",
+    name: "Adam",
+    playerIds: [
+      "cameron-young",
+      "justin-thomas",
+      "bryson-dechambeau",
+      "jordan-spieth",
+      "jason-day",
+    ],
+  },
+  {
+    id: "nolo",
+    name: "Nolo",
+    playerIds: [
+      "scottie-scheffler",
+      "min-woo-lee",
+      "patrick-cantlay",
+      "will-zalatoris",
+      "jason-day",
+    ],
+  },
+  {
+    id: "s-buhler",
+    name: "S Buhler",
+    playerIds: [
+      "scottie-scheffler",
+      "ludvig-aberg",
+      "jon-rahm",
+      "jordan-spieth",
+      "tyrrell-hatton",
+    ],
+  },
+  {
+    id: "espejo",
+    name: "Espejo",
+    playerIds: [
+      "tommy-fleetwood",
+      "ludvig-aberg",
+      "bryson-dechambeau",
+      "brooks-koepka",
+      "jordan-spieth",
+    ],
+  },
+  {
+    id: "stephen",
+    name: "Stephen",
+    playerIds: [
+      "xander-schauffele",
+      "hideki-matsuyama",
+      "jon-rahm",
+      "corey-conners",
+      "shane-lowry",
+    ],
+  },
+  {
+    id: "pablo-d",
+    name: "Pablo D",
+    playerIds: [
+      "collin-morikawa",
+      "ludvig-aberg",
+      "akshay-bhatia",
+      "will-zalatoris",
+      "cameron-smith",
+    ],
+  },
+  {
+    id: "fred",
+    name: "Fred",
+    playerIds: [
+      "tommy-fleetwood",
+      "ludvig-aberg",
+      "jon-rahm",
+      "adam-scott",
+      "jason-day",
+    ],
+  },
+  {
+    id: "arqui",
+    name: "Arqui",
+    playerIds: [
+      "rory-mcilroy",
+      "hideki-matsuyama",
+      "jon-rahm",
+      "brooks-koepka",
+      "cameron-smith",
+    ],
+  },
+];
