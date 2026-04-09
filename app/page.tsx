@@ -1,26 +1,4 @@
-import type { TournamentPlayer } from "../lib/types";
-import { participants } from "../data/quiniela";
-import { computeRanking } from "../lib/scoring";
-import { getProvider } from "../lib/providers";
-
-async function getData() {
-  const provider = getProvider("mock");
-  const leaderboard = await provider.getLeaderboard();
-
-  const playerMap = new Map<string, TournamentPlayer>(
-    leaderboard.map((p) => [p.id, p])
-  );
-
-  const results = computeRanking(participants, playerMap);
-
-  return {
-    provider: "mock",
-    lastUpdated: new Date().toISOString(),
-    totalParticipants: participants.length,
-    totalPlayers: leaderboard.length,
-    results,
-  };
-}
+import { getLeaderboardData } from "../lib/leaderboard";
 
 function formatRelativeToPar(value: number) {
   if (value === 0) return "E";
@@ -29,7 +7,7 @@ function formatRelativeToPar(value: number) {
 }
 
 export default async function Page() {
-  const data = await getData();
+  const data = await getLeaderboardData();
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
