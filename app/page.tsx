@@ -1,9 +1,25 @@
-async function getData() {
-  const res = await fetch("/api/scores", {
-    cache: "no-store",
-  });
+import type { TournamentPlayer } from "../lib/types";
+import { participants } from "../data/quiniela";
+import { computeRanking } from "../lib/scoring";
+import { getProvider } from "../lib/providers";
 
-  return res.json();
+async function getData() {
+  const provider = getProvider("mock");
+  const leaderboard = await provider.getLeaderboard();
+
+  const playerMap = new Map<string, TournamentPlayer>(
+    leaderboard.map((p) => [p.id, p])
+  );
+
+  const results = computeRanking(participants, playerMap);
+
+  return {
+    provider: "mock",
+    lastUpdated: new Date().toISOString(),
+    totalParticipants: participants.length,
+    totalPlayers: leaderboard.length,
+    results,
+  };
 }
 
 function formatRelativeToPar(value: number) {
@@ -33,7 +49,10 @@ export default async function Page() {
 
           <div className="mt-4 flex flex-wrap gap-3 text-sm text-neutral-300">
             <div className="rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1.5">
-              Participantes: <span className="font-semibold text-white">{data.totalParticipants}</span>
+              Participantes:{" "}
+              <span className="font-semibold text-white">
+                {data.totalParticipants}
+              </span>
             </div>
             <div className="rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1.5">
               Última actualización:{" "}
