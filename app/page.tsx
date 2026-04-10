@@ -45,7 +45,15 @@ export default async function Page() {
           {data.results.map((r: any) => (
             <article
               key={r.participant.id}
-              className="rounded-2xl border border-neutral-800 bg-neutral-900 p-5 shadow-sm"
+              className={`rounded-2xl border p-5 shadow-sm ${
+                r.rank === 1
+                  ? "border-yellow-400 bg-yellow-500/10"
+                  : r.rank === 2
+                  ? "border-gray-300 bg-gray-500/10"
+                  : r.rank === 3
+                  ? "border-orange-400 bg-orange-500/10"
+                  : "border-neutral-800 bg-neutral-900"
+              }`}
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
@@ -107,6 +115,9 @@ export default async function Page() {
               <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {r.players.map((p: any) => {
                   const counts = r.validScorers.some((vp: any) => vp.id === p.id);
+                  const isTop3 = r.validScorers
+                    .slice(0, 3)
+                    .some((vp: any) => vp.id === p.id);
 
                   return (
                     <div
@@ -139,7 +150,11 @@ export default async function Page() {
                       </div>
 
                       <div className="mt-3 text-xs text-neutral-400">
-                        {counts ? "Cuenta para el score" : "No cuenta"}
+                        {isTop3
+                          ? "🔥 Cuenta (Top 3)"
+                          : counts
+                          ? "Cuenta (desempate)"
+                          : "No cuenta"}
                       </div>
                     </div>
                   );
